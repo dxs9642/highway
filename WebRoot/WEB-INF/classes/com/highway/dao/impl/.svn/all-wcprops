@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/highway/!svn/ver/221/highway/src/com/highway/dao/impl
+END
+InfoapplicationDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/highway/!svn/ver/168/highway/src/com/highway/dao/impl/InfoapplicationDaoImpl.java
+END
+InfoRechargeDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/highway/!svn/ver/196/highway/src/com/highway/dao/impl/InfoRechargeDaoImpl.java
+END
+InfoDeleteDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/highway/!svn/ver/208/highway/src/com/highway/dao/impl/InfoDeleteDaoImpl.java
+END
+HallDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/highway/!svn/ver/215/highway/src/com/highway/dao/impl/HallDaoImpl.java
+END
+UserDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/highway/!svn/ver/204/highway/src/com/highway/dao/impl/UserDaoImpl.java
+END
+InfoConsumptionDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/highway/!svn/ver/171/highway/src/com/highway/dao/impl/InfoConsumptionDaoImpl.java
+END
+AdministratorDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/highway/!svn/ver/149/highway/src/com/highway/dao/impl/AdministratorDaoImpl.java
+END
+CardDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/highway/!svn/ver/221/highway/src/com/highway/dao/impl/CardDaoImpl.java
+END

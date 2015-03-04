@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/highway/!svn/ver/216/highway/src/com/highway/action
+END
+UserAction-register-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/highway/!svn/ver/189/highway/src/com/highway/action/UserAction-register-validation.xml
+END
+HallAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/highway/!svn/ver/214/highway/src/com/highway/action/HallAction.java
+END
+QueryAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/highway/!svn/ver/187/highway/src/com/highway/action/QueryAction.java
+END
+UserAction-login-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/highway/!svn/ver/185/highway/src/com/highway/action/UserAction-login-validation.xml
+END
+UserAction-changePassword-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/highway/!svn/ver/184/highway/src/com/highway/action/UserAction-changePassword-validation.xml
+END
+CardAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/highway/!svn/ver/187/highway/src/com/highway/action/CardAction.java
+END
+AdminAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/highway/!svn/ver/216/highway/src/com/highway/action/AdminAction.java
+END
+UserAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/highway/!svn/ver/216/highway/src/com/highway/action/UserAction.java
+END
+UserAction-changeEmail-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/highway/!svn/ver/207/highway/src/com/highway/action/UserAction-changeEmail-validation.xml
+END

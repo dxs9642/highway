@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver">
+		</property>
+		<property name="url"
+			value="jdbc:mysql://211.87.229.134:3306/project?useUnicode=true&amp;charaterEncoding=UTF-8">
+		</property>
+		<property name="username" value="root"></property>
+		<property name="password" value="123456"></property>
+	</bean>
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.MySQLDialect
+				</prop>
+			</props>
+		</property>
+		<property name="mappingResources">
+			<list>
+				<value>com/highway/entity/Card.hbm.xml</value>
+				<value>
+					com/highway/entity/InfoApplication.hbm.xml
+				</value>
+				<value>com/highway/entity/InfoDelete.hbm.xml</value>
+				<value>com/highway/entity/User.hbm.xml</value>
+				<value>com/highway/entity/InfoRecharge.hbm.xml</value>
+				<value>
+					com/highway/entity/InfoConsumption.hbm.xml
+				</value>
+				<value>com/highway/entity/Administrator.hbm.xml</value>
+				<value>com/highway/entity/Hall.hbm.xml</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host" value="smtp.126.com" />
+		<property name="port" value="25" />
+		<property name="username" value="highway1234@126.com" />
+		<property name="password" value="1233211234567" />
+		<property name="javaMailProperties">
+			<props>
+				<prop key="mail.smtp.auth">true</prop>
+			</props>
+		</property>
+	</bean>
+
+
+
+
+
+	<!-- ： 姜鹏程： 定义UserDaoImpl类 -->
+	<bean id="UserDao" class="com.highway.dao.impl.UserDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<!-- ： 张露晨：定义CardDaoImpl类 -->
+	<bean id="CardDao" class="com.highway.dao.impl.CardDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<!-- ：田海伦： 定义HallDaoImpl类 -->
+	<bean id="HallDao" class="com.highway.dao.impl.HallDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<!-- ： 张露晨：定义InfoapplicationDao类 -->
+	<bean id="InfoapplicationDao" class="com.highway.dao.impl.InfoapplicationDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<!-- ： 田海伦：定义InfoRechargeDao类 -->
+	<bean id="InfoRechargeDao" class="com.highway.dao.impl.InfoRechargeDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<!-- ： 吴雪瑛：定义InfoConsumptionDao类 -->
+	<bean id="InfoConsumptionDao" class="com.highway.dao.impl.InfoConsumptionDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<!-- ： 姜鹏程：定义AdministratorDao实现类 -->
+	<bean id="AdministratorDao" class="com.highway.dao.impl.AdministratorDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<!-- ： 姜鹏程：定义InfoDeleteDao实现类 -->
+	<bean id="InfoDeleteDao" class="com.highway.dao.impl.InfoDeleteDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+
+	<!--  ： 姜鹏程：定义UserBizImpl类,并为其属性userDao注入值 -->
+	<bean id="UserBiz" class="com.highway.biz.impl.UserBizImpl">
+		<property name="userDao" ref="UserDao"></property>
+	</bean>
+	<!--  田海伦：定义QueryBizImpl类 ,并为其属性infoRechargeDao注入值-->
+	<bean id="QueryBiz" class="com.highway.biz.impl.QueryBizImpl">
+		<property name="infoRechargeDao" ref="InfoRechargeDao"></property>
+	</bean>
+	<!--  田海伦：定义HallBizImpl类 ,并为其属性hallDao注入值-->
+	<bean id="HallBiz" class="com.highway.biz.impl.HallBizImpl">
+		<property name="hallDao" ref="HallDao"></property>
+	</bean>
+	<!--
+		张露晨： 定义，并为其属性CardBizImpl类，并为其属性cardDao infoapplicationDao
+		infoRechargeDao注入值
+	-->
+	<bean id="CardBiz" class="com.highway.biz.impl.CardBizImpl">
+		<property name="cardDao" ref="CardDao"></property>
+		<property name="infoapplicationDao" ref="InfoapplicationDao"></property>
+		<property name="infoRechargeDao" ref="InfoRechargeDao"></property>
+		<property name="infoDeleteDao" ref="InfoDeleteDao"></property>
+	</bean>
+	<!--
+		姜鹏程： 定义AdminBiz，并为其属性注入值
+	-->
+	<bean id="AdminBiz" class="com.highway.biz.impl.AdminBizImpl">
+		<property name="adminDao" ref="AdministratorDao"></property>
+		<property name="cardDao" ref="CardDao"></property>
+		<property name="infoapplicationDao" ref="InfoapplicationDao"></property>
+		<property name="infoConsumptionDao" ref="InfoConsumptionDao"></property>
+		<property name="infoDeleteDao" ref="InfoDeleteDao"></property>
+		<property name="infoRechargeDao" ref="InfoRechargeDao"></property>
+		<property name="userDao" ref="UserDao"></property>
+	</bean>
+
+	<!-- 田海伦： 定义UserAction，并为其属性userBiz注入值 -->
+	<bean id="user" class="com.highway.action.UserAction" scope="prototype">
+		<property name="userBiz" ref="UserBiz"></property>
+	</bean>
+	<!-- 田海伦：定义QueryAction，并为其属性queryBiz注入值 -->
+	<bean id="query" class="com.highway.action.QueryAction">
+		<property name="queryBiz" ref="QueryBiz"></property>
+	</bean>
+	<!-- 姜鹏程：定义AdminAction，并为其属性AdminBiz注入值 -->
+	<bean id="admin" class="com.highway.action.AdminAction">
+		<property name="adminBiz" ref="AdminBiz"></property>
+	</bean>
+	<!-- 姜鹏程：定义CardAction，并为其属性CardBiz注入值 -->
+	<bean id="card" class="com.highway.action.CardAction">
+		<property name="cardBiz" ref="CardBiz"></property>
+	</bean>
+	<!-- 田海伦：定义HallAction，并为其属性HallBiz注入值 -->
+	<bean id="hall" class="com.highway.action.HallAction">
+		<property name="hallBiz" ref="HallBiz"></property>
+	</bean>
+
+</beans>

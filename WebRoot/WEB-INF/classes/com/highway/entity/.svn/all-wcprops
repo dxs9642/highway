@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/highway/!svn/ver/188/highway/src/com/highway/entity
+END
+Card.java
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/highway/!svn/ver/188/highway/src/com/highway/entity/Card.java
+END
+Administrator.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/highway/!svn/ver/188/highway/src/com/highway/entity/Administrator.java
+END
+InfoRecharge.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/highway/!svn/ver/188/highway/src/com/highway/entity/InfoRecharge.hbm.xml
+END
+InfoConsumption.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/highway/!svn/ver/188/highway/src/com/highway/entity/InfoConsumption.java
+END
+User.java
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/highway/!svn/ver/188/highway/src/com/highway/entity/User.java
+END
+InfoDelete.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/highway/!svn/ver/188/highway/src/com/highway/entity/InfoDelete.hbm.xml
+END
+Hall.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/highway/!svn/ver/188/highway/src/com/highway/entity/Hall.hbm.xml
+END
+InfoApplication.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/highway/!svn/ver/188/highway/src/com/highway/entity/InfoApplication.java
+END
+InfoApplication.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/highway/!svn/ver/188/highway/src/com/highway/entity/InfoApplication.hbm.xml
+END
+InfoDelete.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/highway/!svn/ver/188/highway/src/com/highway/entity/InfoDelete.java
+END
+Hall.java
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/highway/!svn/ver/188/highway/src/com/highway/entity/Hall.java
+END
+User.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/highway/!svn/ver/188/highway/src/com/highway/entity/User.hbm.xml
+END
+InfoRecharge.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/highway/!svn/ver/188/highway/src/com/highway/entity/InfoRecharge.java
+END
+Administrator.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/highway/!svn/ver/188/highway/src/com/highway/entity/Administrator.hbm.xml
+END
+InfoConsumption.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/highway/!svn/ver/188/highway/src/com/highway/entity/InfoConsumption.hbm.xml
+END
+Card.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/highway/!svn/ver/188/highway/src/com/highway/entity/Card.hbm.xml
+END

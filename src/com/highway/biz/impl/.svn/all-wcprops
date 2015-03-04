@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/highway/!svn/ver/221/highway/src/com/highway/biz/impl
+END
+QueryBizImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/highway/!svn/ver/149/highway/src/com/highway/biz/impl/QueryBizImpl.java
+END
+HallBizImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/highway/!svn/ver/214/highway/src/com/highway/biz/impl/HallBizImpl.java
+END
+UserBizImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/highway/!svn/ver/207/highway/src/com/highway/biz/impl/UserBizImpl.java
+END
+AdminBizImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/highway/!svn/ver/149/highway/src/com/highway/biz/impl/AdminBizImpl.java
+END
+CardBizImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/highway/!svn/ver/221/highway/src/com/highway/biz/impl/CardBizImpl.java
+END

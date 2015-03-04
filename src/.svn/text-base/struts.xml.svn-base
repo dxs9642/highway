@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.locale" value="zh_CN" />
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<constant name="struts.objectFactory" value="spring" />
+	<constant name="struts.configuration.xml.reload" value="true"></constant>
+	<!-- 开发模式下使用,这样可以打印出更详细的错误信息 -->
+	<constant name="struts.devMode" value="true" />
+
+	<!--  定义一个名词为user的包，继承struts 2 的默认包，指定命名空间为“/user” -->
+	<package name="user" namespace="/user" extends="struts-default">
+
+
+		<global-results>
+			<result name="exception">/Pagerror/error.jsp</result>
+		</global-results>
+		<global-exception-mappings>
+			<exception-mapping result="exception" exception="java.lang.Exception">
+			</exception-mapping>
+		</global-exception-mappings>
+
+		<!-- 于连冬为UserAction的addUser方法配置映射 -->
+		<action name="register" class="user" method="register">
+			<result name="success">/highway/login.jsp</result>
+			<result name="login">/highway/login.jsp</result>
+			<result name="input">/highway/register.jsp</result>
+		</action>
+		<!-- 于连冬为UserAction的login方法配置映射 -->
+		<action name="login" class="user" method="login">
+			<result name="success">/highway/index.jsp </result>
+			<result name="login">/highway/login.jsp</result>
+			<result name="input">/highway/login.jsp</result>
+		</action>
+		<!-- 孙龙霄为UserAction的login方法配置映射 -->
+		<action name="logout" class="user" method="loginout">
+			<result name="success">/highway/index.jsp </result>
+		</action>
+		<!-- 姜鹏程为UserAction的searchCards方法配置映射 -->
+		<action name="searchCards" class="user" method="rsearchCards">
+			<result name="success">/highway/highway/card.jsp</result>
+		</action>
+		<!-- 姜鹏程为UserAction的changePassword方法配置映射 -->
+		<action name="changePassword" class="user" method="changePassword">
+			<result name="success">/highway/index.jsp</result>
+			<result name="input">/highway/updateUser.jsp</result>
+		</action>
+		<!-- 孙龙霄为UserAction的changeAddress方法配置映射 -->
+		<action name="changeAddress" class="user" method="changeAddress">
+			<result name="success">/highway/user.jsp</result>
+		</action>
+		<!-- 孙龙霄为UserAction的changeEmail方法配置映射 -->
+		<action name="changeEmail" class="user" method="changeEmail">
+			<result name="success">/highway/user.jsp</result>
+			<result name="input">/highway/email.jsp</result>
+			<result name="failure">/highway/email.jsp</result>
+		</action>
+	</package>
+
+	<package name="default" extends="struts-default">
+		<default-action-ref name="notFound" />
+		<action name="notFound">
+			<result>/PageNotFound/error.jsp</result>
+		</action>
+	</package>
+
+	<!--  田海伦：定义一个名词为query的包，继承struts 2 的默认包，指定命名空间为“/query” -->
+	<package name="query" namespace="/query" extends="struts-default">
+		<!--  田海伦：为QueryAction的searchRecharge方法配置映射-->
+		<action name="searchRecharge" class="query" method="searchRecharge">
+			<result name="success">/index.jsp</result>
+		</action>
+		<!--  田海伦：为QueryAction的searchRechargeTime方法配置映射-->
+		<action name="searchRechargeTime" class="query" method="searchRechargeTime">
+			<result name="success">/index.jsp</result>
+		</action>
+		<!--  吴雪瑛：为QueryAction的searchPay方法配置映射-->
+		<action name="searchPay" class="query" method="searchPay">
+			<result name="success">/index.jsp</result>
+		</action>
+
+		<!--  吴雪瑛：为QueryAction的searchPayTime方法配置映射-->
+		<action name="searchPayTime" class="query" method="searchPayTime">
+			<result name="success">/index.jsp</result>
+		</action>
+		<!--  吴雪瑛：为QueryAction的searchPayLoc方法配置映射-->
+		<action name="searchPayLoc" class="query" method="searchPayLoc">
+			<result name="success">/index.jsp</result>
+		</action>
+	</package>
+	<!--  姜鹏程：定义一个名词为card的包，继承struts 2 的默认包，指定命名空间为“/card” -->
+	<package name="card" namespace="/card" extends="struts-default">
+		<!-- 姜鹏程:为CardAction的register方法配置映射 -->
+		<action name="register" class="card" method="register">
+			<result name="success">/highway/highway/index.jsp</result>
+		</action>
+		<!-- 姜鹏程:为CardAction的changePassword方法配置映射 -->
+		<action name="changePassword" class="card" method="changePassword">
+			<result name="success">/highway/highway/index.jsp</result>
+			<result name="input">/highway/updateUser.jsp</result>
+		</action>
+		<!-- 姜鹏程:为CardAction的recharge方法配置映射 -->
+		<action name="recharge" class="card" method="recharge">
+			<result name="success">/highway/highway/index.jsp</result>
+			<result name="input">/highway/payMoney.jsp</result>
+		</action>
+	</package>
+	<package name="hall" namespace="/hall" extends="struts-default">
+		<!-- 田海伦：为HallAction的searchAllHall方法配置映射 -->
+		<action name="searchAllHall" class="hall" method="searchAllHall">
+			<result name="success">/index.jsp</result>
+		</action>
+		<!-- 田海伦：为HallAction的changeHall方法配置映射 -->
+		<action name="changeHall" class="hall" method="changeHall">
+			<result name="success">/index.jsp</result>
+		</action>
+		<!-- 吴雪瑛：为HallAction的addHall方法配置映射 -->
+		<action name="addHall" class="hall" method="addHall">
+			<result name="success">/index.jsp</result>
+		</action>
+		<!-- 吴雪瑛：为HallAction的delHall方法配置映射 -->
+		<action name="delHall" class="hall" method="delHall">
+			<result name="success">/index.jsp</result>
+		</action>
+	</package>
+	
+</struts>
+

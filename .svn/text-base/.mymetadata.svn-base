@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="highway"
+  id="myeclipse.1403483362026"
+  context-root="/highway"
+  j2ee-spec="5.0"
+  archive="highway.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
